@@ -1,6 +1,6 @@
 /*
 * WOW wow.js - v1.3.0 - 2016-10-04
-* https://wowjs.uk
+* 
 * Copyright (c) 2016 Thomas Grainger; Licensed MIT
 */
 
@@ -464,8 +464,7 @@
     }, {
       key: 'cacheAnimationName',
       value: function cacheAnimationName(box) {
-        // https://bugzilla.mozilla.org/show_bug.cgi?id=921834
-        // box.dataset is not supported for SVG elements in Firefox
+        
         return this.animationNameCache.set(box, this.animationName(box));
       }
     }, {
