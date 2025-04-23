@@ -298,7 +298,9 @@
                             <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Reply within 24 hours</h5>
                         </div>
                     </div>
-                    <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                    <p class="mb-4">
+                        Get in touch with our team today. We're available to answer your questions, discuss your needs, and explore how we can help your business succeed.
+                    </p>
                     
                 </div>
                 <div class="col-lg-5">
@@ -312,14 +314,6 @@
                                     <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
                                     <textarea class="form-control bg-light border-0" rows="3" placeholder="Message" required></textarea>
                                 </div>
                                 <div class="col-12">
@@ -327,6 +321,17 @@
                                 </div>
                             </div>
                         </form>
+                        <script>
+                            document.getElementById("form").addEventListener("submit", function (e) {
+                                e.preventDefault();
+                            
+                                document.getElementById("form").innerHTML = '<div style="text-align: center;"><img src="files/loading.gif" width="80"></div>';
+                            
+                                setTimeout(() => {
+                                    document.getElementById("form").innerHTML = '<p style="font-size: 18px; color:white; font-weight: 700; text-align: center;">Thank you for registering with {Company}. Our team will get in touch with you shortly to discuss your options.</p>';
+                                }, 2000);
+                            });
+                        </script> 
                     </div>
                 </div>
             </div>
